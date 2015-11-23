@@ -6,5 +6,8 @@ class ArrayDemo{
 		int[] ar = new int[10];
 		Arrays.fillArray(ar);
 		Arrays.printArray(ar);
+		
+		Arrays.reverseArray(ar);
+		Arrays.printArray(ar);
 	}
 }
