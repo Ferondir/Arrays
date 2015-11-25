@@ -11,12 +11,17 @@ class ArrayDemo{
 		System.out.println("____________");
 		
 		System.out.println("-FILL MANUAL-");
-		Arrays.arrayFillManual(ar);
+		//Arrays.arrayFillManual(ar);
 		Arrays.arrayPrint(ar);
 		System.out.println("____________");
 		
 		System.out.println("-REVERSE-");
 		Arrays.arrayReverse(ar);
+		Arrays.arrayPrint(ar);
+		System.out.println("____________");
+		
+		System.out.println("-SHUFFLE-");
+		Arrays.arrayShuffle(ar);
 		Arrays.arrayPrint(ar);
 		System.out.println("____________");
 	}

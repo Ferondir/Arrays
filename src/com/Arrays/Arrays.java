@@ -52,4 +52,20 @@ public class Arrays{
 			
 			return(array);
 		}
+		
+		public static int[] arrayShuffle(int[] array){
+			
+			Random e = new Random();
+			
+			for(int i=0;i<array.length;i++){
+				int index = e.nextInt(array.length);
+				
+				int tmp = array[i];
+				array[i] = array[index];
+				array[index] = tmp;
+				
+			}
+			
+			return(array);
+		}
 }
