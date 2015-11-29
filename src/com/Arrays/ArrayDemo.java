@@ -45,5 +45,12 @@ class ArrayDemo{
 		Arrays.arraySortInsertion(ar);
 		Arrays.arrayPrint(ar);
 		System.out.println("____________");
+		
+		System.out.println("-FAST SORT-");
+		Arrays.arrayShuffle(ar);
+		Arrays.arrayPrint(ar);
+		Arrays.arraySortFast(ar);
+		Arrays.arrayPrint(ar);
+		System.out.println("____________");
 	}
 }

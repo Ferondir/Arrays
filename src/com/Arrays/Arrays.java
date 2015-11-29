@@ -124,4 +124,36 @@ public class Arrays{
 			return(array);
 			
 		}
+		
+		public static int[] arraySortFast(int[] array){
+			
+			arraySortFast(array, 0, array.length-1);
+			
+			return(array);
+		}
+		
+		private static int[] arraySortFast(int[] array, int First, int Last){
+			int first = First;
+			int last = Last;
+			int middle = array[first + (last - first) / 2];
+			
+			do{
+				while(array[first] < middle) first++;
+				while(array[last] > middle) last--;
+				
+				if(first<=last){
+					int tmp = array[first];
+					array[first] = array[last];
+					array[last] = tmp;
+					
+					first++;
+					last--;
+				}
+			}while(first<=last);
+			
+			if(first < Last) arraySortFast(array, first, Last);
+			if(First < last)arraySortFast(array, First, last);
+			
+			return(array);
+		}
 }
