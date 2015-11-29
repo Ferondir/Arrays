@@ -12,10 +12,7 @@ public class Arrays{
 		}
 		
 		public static int[] arrayFillManual(int[] array){
-			
-			
-			
-			
+
 			for(int i=0;i<array.length;i++){
 				
 				boolean error = true;
@@ -67,5 +64,64 @@ public class Arrays{
 			}
 			
 			return(array);
+		}
+		
+		public static int[] arraySortBubble(int[] array){
+			
+			for(int i=0;i<array.length;i++){
+				for(int j=i;j<array.length;j++){
+					if(array[i] > array[j]){
+						int tmp = array[i];
+						array[i] = array[j];
+						array[j] = tmp;
+					}
+				}
+			}
+			
+			return(array);
+		}
+		
+		public static int[] arraySortSelection(int[] array){
+			
+			for(int i=0;i<array.length;i++){
+				
+				int min_i = i;
+				
+				for(int j=i;j<array.length;j++){
+					if(array[min_i] > array[j]) min_i = j;
+				}
+				
+				if(min_i != i){
+					int tmp = array[i];
+					array[i] = array[min_i];
+					array[min_i] = tmp;
+				}
+			}
+			
+			return(array);
+		}
+		
+		public static int[] arraySortInsertion(int[] array){
+			
+			for(int i=1;i<array.length;i++){
+				int tmp = array[i];
+				int j;
+				
+				for(j=i;j>0;j--){
+					
+					if(tmp > array[j-1]){
+						break;
+					}
+					
+					array[j] = array[j - 1];
+					
+				}
+				
+				array[j] = tmp;			
+				
+			}
+			
+			return(array);
+			
 		}
 }

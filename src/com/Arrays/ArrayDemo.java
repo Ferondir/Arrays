@@ -24,5 +24,26 @@ class ArrayDemo{
 		Arrays.arrayShuffle(ar);
 		Arrays.arrayPrint(ar);
 		System.out.println("____________");
+		
+		System.out.println("-BUBBLE SORT-");
+		Arrays.arrayShuffle(ar);
+		Arrays.arrayPrint(ar);
+		Arrays.arraySortBubble(ar);
+		Arrays.arrayPrint(ar);
+		System.out.println("____________");
+		
+		System.out.println("-SELECTION SORT-");
+		Arrays.arrayShuffle(ar);
+		Arrays.arrayPrint(ar);
+		Arrays.arraySortSelection(ar);
+		Arrays.arrayPrint(ar);
+		System.out.println("____________");
+		
+		System.out.println("-INSERTION SORT-");
+		Arrays.arrayShuffle(ar);
+		Arrays.arrayPrint(ar);
+		Arrays.arraySortInsertion(ar);
+		Arrays.arrayPrint(ar);
+		System.out.println("____________");
 	}
 }
