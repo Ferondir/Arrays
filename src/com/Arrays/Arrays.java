@@ -71,9 +71,10 @@ public class Arrays{
 			for(int i=0;i<array.length;i++){
 				for(int j=i;j<array.length;j++){
 					if(array[i] > array[j]){
-						int tmp = array[i];
-						array[i] = array[j];
-						array[j] = tmp;
+						// int tmp = array[i];
+						// array[i] = array[j];
+						// array[j] = tmp;
+						arraySwapElements(array, i, j);
 					}
 				}
 			}
@@ -92,9 +93,10 @@ public class Arrays{
 				}
 				
 				if(min_i != i){
-					int tmp = array[i];
-					array[i] = array[min_i];
-					array[min_i] = tmp;
+					// int tmp = array[i];
+					// array[i] = array[min_i];
+					// array[min_i] = tmp;
+					arraySwapElements(array, i, min_i);
 				}
 			}
 			
@@ -142,9 +144,10 @@ public class Arrays{
 				while(array[last] > middle) last--;
 				
 				if(first<=last){
-					int tmp = array[first];
-					array[first] = array[last];
-					array[last] = tmp;
+					// int tmp = array[first];
+					// array[first] = array[last];
+					// array[last] = tmp;
+					arraySwapElements(array, first, last);
 					
 					first++;
 					last--;
@@ -153,6 +156,15 @@ public class Arrays{
 			
 			if(first < Last) arraySortFast(array, first, Last);
 			if(First < last)arraySortFast(array, First, last);
+			
+			return(array);
+		}
+		
+		private static int[] arraySwapElements(int[] array, int firstElementIndex, int secondElementIndex){
+			
+			int tmp = array[firstElementIndex];
+			array[firstElementIndex] = array[secondElementIndex];
+			array[secondElementIndex] = tmp;
 			
 			return(array);
 		}
